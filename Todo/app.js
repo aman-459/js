@@ -8,13 +8,11 @@ window.addEventListener('DOMContentLoaded', localStorage);
 
 add.addEventListener('click', () => {
   addTasks();
-  console.log("clicked");
 });
 
 function addTasks() {
   let task = inp.value.trim();
   if(!task) return;
-  console.log(task);
 
   const taskObj = {
     text: task,
@@ -63,7 +61,9 @@ function styleTask(li, completed) {
   if (completed) {
     li.style.textDecoration = 'line-through';
     li.style.color = 'gray';
+    //li.classList.add('completed');
   } else {
+    //li.classList.add('notCompleted');
     li.style.textDecoration = 'none';
     li.style.color = 'black';
   }
